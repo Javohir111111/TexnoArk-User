@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Select } from 'antd';
-import http from '@/api';  // Импортируйте ваш модуль http
-import { getProduct } from '@/service/product.service';
-
+import { TreeSelect } from 'antd';
+import http from '@/api';  // Ensure you have your HTTP module
+import { getProduct } from '@/service/category.service';
 
 const onChange = (value: string) => {
   console.log(`selected ${value}`);
@@ -22,9 +21,9 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await getProduct(100, 1); // Пример использования limit и page
+        const response = await getProduct(100, 1); // Example usage of limit and page
         console.log('Response:', response);
-        setCategories(response.data.data.categories); // Предполагается, что категории находятся в response.data.categories
+        setCategories(response.data.data.categories); // Assuming categories are in response.data.categories
       } catch (error) {
         console.error('Error fetching categories:', error);
       }
@@ -33,18 +32,24 @@ const App: React.FC = () => {
     fetchCategories();
   }, []);
 
+  const formatTreeData = (categories: any) => {
+    // Assuming categories is an array of objects with 'id', 'name', and optional 'children' properties
+    return categories.map((category: any) => ({
+      title: category.name,
+      value: category.id,
+      children: category.children ? formatTreeData(category.children) : [],
+    }));
+  };
+
   return (
-    <Select
+    <TreeSelect
       showSearch
       placeholder="Category"
-      optionFilterProp="label"
+      treeDefaultExpandAll
       className='w-[200px] h-[47px]'
       onChange={onChange}
       onSearch={onSearch}
-      options={categories.map((category: any) => ({
-        value: category.id, // Подставьте правильные ключи из данных категорий
-        label: category.name, // Подставьте правильные ключи из данных категорий
-      }))}
+      treeData={formatTreeData(categories)}
     />
   );
 };
