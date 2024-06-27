@@ -6,5 +6,5 @@ export const getProduct = (limit : any , page: any)=>{
 }
 export const getSingleProduct = ()=>{
     const id = Cookies.get("product_id");
-    return http.get(`/product/${id}`)
+    return http.get(`/products/${id}`)
 }

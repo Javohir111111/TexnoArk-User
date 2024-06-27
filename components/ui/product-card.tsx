@@ -1,10 +1,13 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import AddToCard from "@/assets/icons/add_to_card.svg";
+import ShoppingCartOutlined from "@ant-design/icons/ShoppingCartOutlined";
+import PhoneImg from '@/assets/images/single-page-img.png'
+import Cookie from "js-cookie";
 import { HeartOutlined, HeartFilled } from "@ant-design/icons";
 import { getProduct } from "@/service/product.service";
 import http from "@/api";
+import Link from "next/link";
+import Image from "next/image";
 
 interface Product {
   id: number;
@@ -25,10 +28,10 @@ const Index: React.FC = () => {
       if (response.status === 200) {
         const productsWithLikeState = response.data.data.products.map((product: any) => ({
           ...product,
-          liked: false, 
+          liked: false,
           // console.log(first)
-          
-        }));  
+
+        }));
         setData(productsWithLikeState);
       }
     } catch (error) {
@@ -62,7 +65,7 @@ const Index: React.FC = () => {
       {data.map((product: Product) => (
         <div key={product?.id} className="relative w-[305px] h-[460px] bg-white rounded-[10px] cursor-pointer">
           <div className="flex items-center justify-center h-[55%]">
-            {/* <Image className="max-w-[230px]" src={product.image_url[0]} alt={product.product_name} width={230} height={230} /> */}
+            <Image className="max-w-[230px]" src={PhoneImg} alt={product.name} width={200} height={200} />
           </div>
           <div className="px-[28px] h-[45%]">
             <h3 className="text-text mb-4">{product?.name}</h3>
@@ -71,10 +74,13 @@ const Index: React.FC = () => {
               <p className="text-[18px] font-bold text-orange">${(product?.price)}</p>
             </div>
           </div>
-          <button className="bg-orange absolute bottom-[30px] left-[28px] w-[250px] py-[10px] flex items-center justify-center gap-3 rounded-md z-10">
-            <Image src={AddToCard} alt="add to cart" />
-            <span className="text-white">Cart</span>
-          </button>
+          <Link
+            onClick={() => Cookie.set("product_id", product.id)}
+            href={`/${product.id}`}
+            className="bg-orange absolute bottom-[30px] left-[28px] w-[250px] py-[10px] flex items-center justify-center gap-3 rounded-md z-10"
+          >
+            <span className="text-white"> <ShoppingCartOutlined /> Корзина</span>
+          </Link>
           <div className="absolute top-5 right-6 cursor-pointer" onClick={() => handleLikeClick(product.id)}>
             {product.liked ? <HeartFilled style={{ color: 'red' }} /> : <HeartOutlined />}
           </div>

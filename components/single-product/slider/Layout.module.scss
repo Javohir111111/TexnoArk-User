@@ -1,0 +1,268 @@
+.title {
+  width: 447px;
+  height: 36px;
+  color: rgba(36, 14, 0, 0.80);
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  /* 150% */
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.all_color {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 26px;
+}
+
+.cost {
+  width: 41px;
+  height: 22px;
+  color: rgba(36, 14, 0, 0.80);
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  /* 137.5% */
+}
+
+.dis_cost {
+  width: 229px;
+  height: 40px;
+  color: rgba(36, 14, 0, 0.80);
+  font-family: Outfit;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.costs {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-top: 42px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--Text-Black80, rgba(36, 14, 0, 0.80));
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  /* 137.5% */
+  border-radius: 6px;
+  background: var(--Asosiy-Gray, #F0F0F0);
+  padding: 16px 31px;
+  margin-top: 36px;
+}
+
+.korzina {
+  color: var(--Asosiy-White, #FFF);
+
+  /* H6/Callout/reguler 16px */
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  /* 137.5% */
+  border-radius: 6px;
+  background: var(--Asosiy-Orangeret100, #D55200);
+  padding: 16px 44px;
+
+}
+
+.purchase {
+  color: #FFF;
+  text-align: center;
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  border-radius: 6px;
+  background: #1EB91E;
+  padding: 16px 48px;
+
+}
+
+.all_btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+
+.btn::after {
+  width: 16px;
+  height: 16px;
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url("../../../assets/after.svg");
+}
+
+.driwer_title {
+  width: 278px;
+  height: 26px;
+  color: var(--Text-Black80, rgba(36, 14, 0, 0.80));
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  /* 144.444% */
+}
+
+.shop_title {
+  width: 320px;
+  height: 26px;
+  color: var(--Text-Black80, rgba(36, 14, 0, 0.80));
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  /* 144.444% */
+}
+
+.time_title {
+  width: 366px;
+  height: 26px;
+  color: var(--Text-Black80, rgba(36, 14, 0, 0.80));
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  /* 144.444% */
+}
+
+.driwer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.shop {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.second {
+  width: 520px;
+  height: 560px;
+  border-radius: 10px;
+  background: var(--Asosiy-White, #fff);
+  padding: 40px 40px;
+}
+
+.property {
+  color: var(--Asosiy-White, #FFF);
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  border-radius: 6px;
+  background: var(--Brend-rang-tuslari-Orangert80, #FF6F14);
+  padding: 14px 32px;
+}
+
+.comment {
+  color: var(--Asosiy-Black, #331400);
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  border-radius: 6px;
+  background: var(--Asosiy-White, #FFF);
+  padding: 14px 32px;
+}
+
+.brand {
+  width: 224px;
+  height: 26px;
+  color: var(--Text-Black80, rgba(36, 14, 0, 0.80));
+
+  /* H5/Bod3/Reguler 18 px */
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  /* 144.444% */
+}
+
+
+.sub_brand {
+  width: 235px;
+  height: 26px;
+  color: var(--Text-Black80, rgba(36, 14, 0, 0.80));
+
+  /* H5/Bod3/Reguler 18 px */
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  /* 144.444% */
+}
+
+.all_products {
+  padding: 60px 80px;
+  width: 820px;
+  height: 542px;
+  border-radius: 10px;
+  background: #F5F5F5;
+  margin-top: 30px;
+  /* padding-bottom: 60px; */
+}
+
+
+.image-gallery-custom-left-nav,
+.image-gallery-custom-right-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.image-gallery-custom-left-nav {
+    left: 0;
+}
+
+.image-gallery-custom-right-nav {
+    right: 0;
+}
