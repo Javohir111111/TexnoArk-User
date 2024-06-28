@@ -5,6 +5,7 @@ import Container from "@/components/container";
 import { getSingleProduct } from "@/service/product.service";
 import Layout from "@/components/single-product/slider/about-part";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function SinglePart() {
     const [product, setProduct] = useState<any>({});
@@ -56,7 +57,8 @@ export default function SinglePart() {
                         Oyiga 1 334 999 so‘mdan 12/oyga muddatli to ‘lov
                     </button>
                     <div className="flex gap-3 mb-4">
-                        <button className="bg-[#F57C00] text-white py-2 px-4 rounded w-full">Savtaga qo'shish</button>
+                        {/* <button className="bg-[#F57C00] text-white py-2 px-4 rounded w-full">Savtaga qo'shish</button> */}
+                        <Link href={"/basket"} className="bg-[#F57C00] text-white py-2 px-4 text-center rounded w-full">Savatga qo'shish</Link>
                         <button className="bg-[#4CAF50] text-white py-2 px-4 rounded w-full">Xarid qilish</button>
                     </div>
                     <p className="mb-2">

@@ -1,0 +1,144 @@
+.korzina_title {
+    width: 295px;
+    height: 26px;
+    color: var(--Text-Black80, rgba(36, 14, 0, 0.80));
+    text-align: center;
+
+    /* H5/Bod3/Reguler 18 px */
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    /* 144.444% */
+}
+
+.delete_btn {
+    padding: 12px 17px;
+    border-radius: 6px;
+    background: var(--Asosiy-Gray, #F0F0F0);
+}
+
+.like_btn {
+    padding: 12px 17px;
+    border-radius: 6px;
+    background: var(--Asosiy-Gray, #F0F0F0);
+}
+
+.basket_card {
+    width: 900px;
+    height: 200px;
+    padding: 27px 60px;
+    border-radius: 10px;
+    background: var(--Asosiy-White, #FFF);
+}
+
+.basket_cost {
+    width: 179px;
+    height: 36px;
+    color: var(--Text-Black100, #240E00);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.decrement {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--Asosiy-Orangeret100, #D55200);
+}
+
+.increment {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--Asosiy-Green, #1EB91E);
+}
+
+.buy {
+    width: 198px;
+    height: 36px;
+    color: var(--Asosiy-Black, #331400);
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.prod_title {
+    width: 89px;
+    height: 22px;
+    color: var(--Text-Black80, rgba(36, 14, 0, 0.80));
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 137.5% */
+}
+
+.quantity {
+    width: 32px;
+    height: 26px;
+    color: var(--Asosiy-Black, #331400);
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.all_cost {
+    width: 94px;
+    height: 22px;
+    color: var(--Text-Black80, rgba(36, 14, 0, 0.80));
+
+    /* H6/Callout/reguler 16px */
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 137.5% */
+}
+
+.all_quantity {
+    width: 199px;
+    height: 40px;
+    color: var(--Asosiy-Black, #331400);
+
+    /* H3/Body/Bold 28px */
+    font-family: Outfit;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    /* 142.857% */
+}
+
+.legitimation {
+    color: var(--Asosiy-White, #FFF);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    border-radius: 6px;
+    background: var(--Asosiy-Orangeret100, #D55200);
+    padding: 16px 74px;
+    margin-top: 32px;
+
+}
+
+.access_card {
+    padding: 40px 40px;
+    width: 440px;
+    height: 278px;
+    border-radius: 10px;
+    background: var(--Asosiy-White, #FFF);
+    margin-top: 24px;
+}

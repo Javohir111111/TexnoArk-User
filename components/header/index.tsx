@@ -24,9 +24,12 @@ const Index = () => {
         <Container>
           <div className="py-[9px] flex justify-between items-center">
             <div className="flex gap-5">
-              <p className="text-[14px] text-[#240E00CC] cursor-pointer">
+            <Link href="/about" className="flex items-center gap-1">
+              {/* <Image src={Logo} alt="logo" /> */}
+              <span className="text-[14px] text-[#240E00CC] cursor-pointer">
                 About us
-              </p>
+              </span>
+            </Link>
               <p className="text-[14px] text-[#240E00CC] cursor-pointer">
                 Delivery
               </p>
@@ -97,14 +100,14 @@ const Index = () => {
                   </div>
                 )}
               </div>
-              <div className="py-[13px] px-[14px] bg-[#F0F0F0] rounded-md cursor-pointer flex items-center gap-1">
+              <Link href={"/basket"} className="py-[13px] px-[14px] bg-[#F0F0F0] rounded-md cursor-pointer flex items-center gap-1">
                 <Image src={Cart} alt="like icon" />
                 {number > 0 && (
                   <div className="w-5 h-5 rounded-full bg-orange flex items-center justify-center text-white text-[10px]">
                     <span>{number}</span>
                   </div>
                 )}
-              </div>
+              </Link>
               <div onClick={loginPage} className="py-[13px] px-[14px] rounded-full bg-[#F0F0F0] cursor-pointer flex items-center gap-1">
                 <Image src={User} alt="like icon" />
               </div>
