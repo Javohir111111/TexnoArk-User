@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <>
       <Intro />
-      <PopularProducts />
+      <div className='justify-items-center mx-auto'>
+        <PopularProducts />
+      </div>
       <Complaint />
     </>
   );

@@ -1,0 +1,46 @@
+/* global.css */
+// @media (max-width: 640px) {
+//   .language {
+//     display: none;
+//   }
+// }
+
+// @media (min-width: 640px) and (max-width: 768px) {
+//   .language {
+//     display: none;
+//   }
+// }
+
+// @media (min-width: 768px) {
+//   .language {
+//     display: none;
+//   }
+// }
+
+
+
+@media screen and (max-width: 1120px) {
+  .select {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .analytic-icon{
+    display: none;
+  }
+  .before-md{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .phone, .brand-name {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .unused {
+    display: none;
+  }
+}

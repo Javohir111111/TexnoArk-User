@@ -1,6 +1,7 @@
 import Container from "@/components/container";
 import IphoneImage from "@/assets/images/iphone.png";
 import Image from "next/image";
+
 const Index = () => {
   return (
     <section className="pt-6">
@@ -17,11 +18,15 @@ const Index = () => {
             Boshlang’ich to’lovsiz pasport evaziga halol muddatli to’lovga xarid
             qiling
           </p>
-          <Image
-            className="absolute right-[111px] top-[48px]"
-            src={IphoneImage}
-            alt="iphone"
-          />
+          <div className="absolute right-[10%] top-[48px] w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-auto">
+            <Image
+              src={IphoneImage}
+              alt="iphone"
+              className="object-contain"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 75vw, (max-width: 1024px) 50vw, 33vw"
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </div>
         </div>
       </Container>
     </section>
