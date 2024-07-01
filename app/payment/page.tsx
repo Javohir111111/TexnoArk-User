@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Form, Input, Select, Radio, DatePicker } from 'antd';
+import Geolocation from '@/components/geolocation';
 import Container from '@/components/container';
 import './style.scss'
 
@@ -57,6 +58,7 @@ const DeliveryForm = () => {
                     </Radio.Group>
                 </Form.Item>
             </Form>
+            <Geolocation/>
             <div className="access_card">
                 <h2 className="buy">Sizni haridlaringiz</h2>
 
