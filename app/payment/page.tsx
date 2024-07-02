@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Form, Input, Select, Radio, DatePicker } from 'antd';
 import Geolocation from '@/components/geolocation';
 import Container from '@/components/container';
+import SliderProducts from '@/components/single-product/slider-products';
 import './style.scss'
 
 const { Option } = Select;
@@ -75,8 +76,10 @@ const DeliveryForm = () => {
                             <button className="legitimation">Xaridni rasmiylashtirish</button>
                         </div>
                     </Link>
-
                 </div>
+            </div>
+            <div className=' mb-[60px]'>
+            <SliderProducts/>
             </div>
         </Container>
     );

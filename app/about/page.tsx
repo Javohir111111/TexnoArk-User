@@ -133,7 +133,12 @@ const TabComponent: React.FC = () => {
                     {renderContent()}
                 </div>
             </div>
-            <SliderProducts />
+            <div className=" mb-[60px]">
+                <Container>
+                    <h3 className="text-[20px] font-medium sm:text-[20px] sm:font-medium md:text-[24px] md:font-semibold lg:text-[28px] lg:font-bold mb-6">Aksiyadagi tovarlar</h3>
+                </Container>
+                <SliderProducts />
+            </div>
         </Container>
     );
 };

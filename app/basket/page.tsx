@@ -1,29 +1,23 @@
-"use client"
-import Image from "next/image"
-import Iphone from "@/assets/images/iphone.png"
-import Container from "@/components/container"
-import Card from "@/sections/popular-products"
-// import Like from "../../assets/like.svg"
-import { DeleteOutlined, HeartOutlined } from "@ant-design/icons"
-import { useState } from "react"
-import "./style.scss"
-import Link from "next/link"
+'use client';
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Iphone from '@/assets/images/iphone.png';
+import Container from '@/components/container';
+import SliderProducts from '@/components/single-product/slider-products';
+import { DeleteOutlined, HeartOutlined } from '@ant-design/icons';
+import Link from 'next/link';
+import './style.scss';
 
 const Page = () => {
-    const [count1, setCount1] = useState(1)
-    const [count2, setCount2] = useState(1)
-    const [count3, setCount3] = useState(1)
-    const [count4, setCount4] = useState(1)
-    const [count5, setCount5] = useState(1)
-    const [count6, setCount6] = useState(1)
+    const [count1, setCount1] = useState(1);
 
     return (
         <Container>
-            <div className="flex flex-col xl:flex-row gap-8">
+            <div className="flex flex-col md:flex-row gap-8">
                 <div className="pt-6 pb-16 mx-auto w-full xl:w-2/3">
                     {[1, 2, 3, 4, 5, 6].map((item, index) => (
                         <div key={index} className="basket_card flex flex-col md:flex-row items-center gap-8 mt-4">
-                            <div>
+                            <div className="basket_image">
                                 <Image
                                     src={Iphone}
                                     width={128}
@@ -31,10 +25,10 @@ const Page = () => {
                                     alt="Picture of the author"
                                 />
                             </div>
-                            <div className="flex flex-col md:flex-row items-center justify-between w-full">
-                                <div>
-                                    <h2 className="korzina_title"> Apple iPhone 13 Pro 8/128 GB Moviy</h2>
-                                    <div className="flex items-center max-w-32 mt-8 gap-2">
+                            <div className="basket_details flex flex-1 flex-col md:flex-row justify-between items-center w-full">
+                                <div className="basket_info">
+                                    <h2 className="korzina_title">Apple iPhone 13 Pro 8/128 GB Moviy</h2>
+                                    <div className="quantity-control flex items-center mt-8 gap-2">
                                         <button onClick={() => setCount1(count1 > 0 ? count1 - 1 : count1)} type="button" id="decrement-button" className="decrement">
                                             <svg className="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
                                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h16" />
@@ -48,9 +42,9 @@ const Page = () => {
                                         </button>
                                     </div>
                                 </div>
-                                <div className="ml-0 md:ml-32 mt-4 md:mt-0">
+                                <div className="basket_actions flex flex-col items-end mt-4 md:mt-0">
                                     <p className="basket_cost">{14699999 * count1} сум</p>
-                                    <div className="flex items-center gap-4 mt-8 ml-10 md:ml-0">
+                                    <div className="flex items-center gap-4 mt-8">
                                         <button className="delete_btn">
                                             <DeleteOutlined />
                                         </button>
@@ -81,12 +75,12 @@ const Page = () => {
                     </Link>
                 </div>
             </div>
-            <div className="">
-                <h3>Aksiyadagi mahsulotlar</h3>
-                <Card/>
+            <div className="mb-[60px]">
+                <h3 className="text-[32px] font-bold mb-6">Aksiyadagi mahsulotlar</h3>
+                <SliderProducts />
             </div>
         </Container>
-    )
-}
+    );
+};
 
-export default Page
+export default Page;

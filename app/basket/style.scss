@@ -1,41 +1,38 @@
 .korzina_title {
-    width: 295px;
-    height: 26px;
-    color: var(--Text-Black80, rgba(36, 14, 0, 0.80));
-    text-align: center;
-
-    /* H5/Bod3/Reguler 18 px */
+    width: 100%;
     font-family: Outfit;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
-    /* 144.444% */
 }
 
-.delete_btn {
-    padding: 12px 17px;
-    border-radius: 6px;
-    background: var(--Asosiy-Gray, #F0F0F0);
-}
-
-.like_btn {
+.delete_btn, .like_btn {
     padding: 12px 17px;
     border-radius: 6px;
     background: var(--Asosiy-Gray, #F0F0F0);
 }
 
 .basket_card {
-    width: 900px;
-    height: 200px;
-    padding: 27px 60px;
+    max-width: 900px;
+    padding: 27px 20px;
     border-radius: 10px;
     background: var(--Asosiy-White, #FFF);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    @media (min-width: 768px) {
+        height: 200px;
+        padding: 27px 60px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .basket_cost {
-    width: 179px;
-    height: 36px;
     color: var(--Text-Black100, #240E00);
     text-align: center;
     font-family: Outfit;
@@ -45,100 +42,112 @@
     line-height: 36px;
 }
 
-.decrement {
+.decrement, .increment {
     padding: 10px 12px;
     border-radius: 6px;
+}
+
+.decrement {
     border: 1px solid var(--Asosiy-Orangeret100, #D55200);
 }
 
 .increment {
-    padding: 10px 12px;
-    border-radius: 6px;
-    border: 1px solid var(--Asosiy-Green, #1EB91E);
+    border: 1px solid #1EB91E;
 }
 
 .buy {
-    width: 198px;
-    height: 36px;
-    color: var(--Asosiy-Black, #331400);
-    font-family: Outfit;
+    color: #331400;
     font-size: 24px;
-    font-style: normal;
     font-weight: 700;
     line-height: 36px;
 }
 
-.prod_title {
-    width: 89px;
-    height: 22px;
-    color: var(--Text-Black80, rgba(36, 14, 0, 0.80));
-    font-family: Outfit;
+.prod_title, .all_cost {
+    color: rgba(36, 14, 0, 0.80);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
-    /* 137.5% */
 }
 
-.quantity {
-    width: 32px;
-    height: 26px;
-    color: var(--Asosiy-Black, #331400);
-    font-family: Outfit;
+.quantity, .all_quantity {
+    color: #331400;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 26px;
 }
 
-.all_cost {
-    width: 94px;
-    height: 22px;
-    color: var(--Text-Black80, rgba(36, 14, 0, 0.80));
-
-    /* H6/Callout/reguler 16px */
-    font-family: Outfit;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    /* 137.5% */
-}
-
 .all_quantity {
-    width: 199px;
-    height: 40px;
-    color: var(--Asosiy-Black, #331400);
-
-    /* H3/Body/Bold 28px */
-    font-family: Outfit;
     font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
     line-height: 40px;
-    /* 142.857% */
 }
 
 .legitimation {
-    color: var(--Asosiy-White, #FFF);
+    color: #FFF;
     text-align: center;
-    font-family: Outfit;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
     border-radius: 6px;
-    background: var(--Asosiy-Orangeret100, #D55200);
-    padding: 16px 74px;
+    background-color: #D55200;
+    padding: 16px 20px;
     margin-top: 32px;
+    width: 100%;
 
+    @media (min-width: 768px) {
+        padding: 16px 74px;
+    }
 }
 
 .access_card {
-    padding: 40px 40px;
-    width: 440px;
-    height: 278px;
+    padding: 20px;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    background: var(--Asosiy-White, #FFF);
+    background-color: #FFF;
     margin-top: 24px;
+
+    @media (min-width: 768px) {
+        padding: 40px;
+        width: 440px;
+        height: 278px;
+    }
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.basket_details {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.basket_info {
+    flex: 1;
+}
+
+.basket_actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+    }
 }
