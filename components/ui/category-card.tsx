@@ -61,9 +61,9 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="">
+    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 mx-auto">
       {data.map((product: Product) => (
-        <div key={product?.id} className="relative mb-4 w-[200px] h-[300px] sm:w-[240px] sm:h-[360px] md:w-[280px] md:h-[420px] lg:w-[305px] lg:h-[465px] bg-white rounded-[10px] cursor-pointer">
+        <div key={product?.id} className="relative w-[200px] h-[300px] sm:w-[240px] sm:h-[360px] md:w-[280px] md:h-[420px] lg:w-[305px] lg:h-[465px] bg-white rounded-[10px] cursor-pointer">
           <div className="flex items-center justify-center h-[55%]">
             <Image className="max-w-[140px] max-h-[140px] sm:max-w-[170px] sm:max-h-[170px] md:max-w-[200px] md:max-h-[200px] lg:max-w-[230px] lg:max-h-[230px]" src={PhoneImg} alt={product.name}/>
           </div>

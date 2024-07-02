@@ -1,36 +1,19 @@
-.tab-container {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
+.tab-component {
+    .tabs {
+        button {
+            @apply px-4 py-2 rounded;
 
-.tabs {
-    display: flex;
-    // justify-content: ;
-    gap: 10px;
-    margin-bottom: 20px;
-}
+            &.bg-orange-500 {
+                background-color: #f97316; // Tailwind orange-500
+            }
+        }
+    }
 
-.tabs .tab-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #f0f0f0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.tabs .tab-button:hover {
-    background-color: #e0e0e0;
-}
-
-.tabs .tab-button.active {
-    background-color: #FF6F14;
-    color: #fff;
-}
-
-.content {
-    padding: 80px;
-    // border: 1px solid #ccc;
-    background-color: #fafafa;
+    .tab-content {
+        .flex {
+            @media (min-width: 1024px) { // Tailwind lg breakpoint
+                flex-direction: row !important;
+            }
+        }
+    }
 }
