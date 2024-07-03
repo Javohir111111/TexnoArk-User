@@ -35,11 +35,11 @@ export default function SinglePart() {
 
     return (
         <Container>
-            <div className="flex justify-between flex-wrap sm:ml-[40px]  items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 justify-between  sm:ml-[40px]  items-center">
                 <div className="xl:max-w-[800px] mb-[50px]  sm:max-w-[500px] sm:h-[auto] xl:h-[auto] xl:mb-[50px]">
                 <Layout/>
                 </div>
-                <div className="w-[520px] h-[auto] gap-5 bg-white p-7 sm:mb-9 border rounded-lg">
+                <div className="max-w-[520px] w-full h-[auto] gap-5 bg-white p-7 sm:mb-9 border rounded-lg">
                     <h1 className="text-[24px] font-medium mb-4">
                         {product.name}
                     </h1>

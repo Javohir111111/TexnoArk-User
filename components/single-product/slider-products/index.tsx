@@ -39,7 +39,7 @@ interface Product {
   name: string;
   price: number;
   discount: number;
-  // image_url: string[];
+  images: string[];
   liked: boolean;
 }
 
@@ -122,7 +122,8 @@ export default function App() {
             <SwiperSlide key={product.id}>
               <div className="relative w-[200px] h-[300px] sm:w-[240px] sm:h-[360px] md:w-[280px] md:h-[420px] lg:w-[305px] lg:h-[465px] bg-white rounded-[10px] cursor-pointer">
                 <div className="flex items-center justify-center h-[55%]">
-                  <Image className="max-w-[140px] max-h-[140px] sm:max-w-[170px] sm:max-h-[170px] md:max-w-[200px] md:max-h-[200px] lg:max-w-[230px] lg:max-h-[230px]" src={PhoneImg} alt={product.name} />
+                  <img className='max-w-[140px] max-h-[140px] sm:max-w-[170px] sm:max-h-[170px] md:max-w-[200px] md:max-h-[200px] lg:max-w-[230px] lg:max-h-[230px]' src={product.images[0]} alt="" />
+                  {/* <Image className="max-w-[140px] max-h-[140px] sm:max-w-[170px] sm:max-h-[170px] md:max-w-[200px] md:max-h-[200px] lg:max-w-[230px] lg:max-h-[230px]" width={200} height={200} src={product?.images[0]} alt={product.name} /> */}
                 </div>
                 <div className="px-[28px] h-[45%]">
                   <h3 className="text-text mb-4">{product?.name}</h3>
